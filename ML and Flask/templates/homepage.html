@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=IBM Plex Sans" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
+  <title>Landing Page</title>
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li>Articles</li>
+        <li>Pricing</li>
+        <li>About</li>
+        <li><a href="{{ url_for('contact') }}">Contact us</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section>
+    <div class="title">A modern way to <br> trade CRYPTO.</div>
+    <div class="description">Empower traders to make professional, informed market predictions <br> in a visually interactive interface with no analysis.</div>
+    <div class="cta">
+        <a href="{{ url_for('home') }}"><div class="start-trial">Start Here</div></a>
+    </div>
+  </section>
+  <section class=articles>
+    <div class="divider">
+      <div class="page-divider"></div>
+      <div class="features">Features to look out for</div>
+      <div class="page-divider"></div>
+    </div>
+    <div class="listed-features">
+      <div class="article">
+        <img src="https://i.ibb.co/LkzV7r2/Rectangle-8.png", alt="img" />
+        <div class="article-desc">Visually appealing charts<br> with great interactivity.</div>
+        <div class="date">Ready-to-use</div>
+      </div>
+      <div class="article">
+        <img src="https://i.ibb.co/P4rRkX0/Rectangle-8-1.png" alt="Rectangle-8-1" border="0" />
+        <div class="article-desc"> Tradable AI market predictions<br> via highly confident models</div>
+        <div class="date">Ready-to-use</div>
+      </div>
+      <div class="article">
+        <img src="https://i.ibb.co/q77MS5Q/Frame-7.png" alt="Frame-7" border="0" />
+        <div class="article-desc">A comprehensive list of <br> fundamental news feeds</div>
+        <div class="date">Ready-to-use</div>
+      </div>
+      <div class="article">
+        <img src="https://i.ibb.co/W66Z3YV/Rectangle-8.png" alt="Rectangle-8" border="0" />
+        <div class="article-desc">Save various predictions<br> based on query preference</div>
+        <div class="date">In pipeline</div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

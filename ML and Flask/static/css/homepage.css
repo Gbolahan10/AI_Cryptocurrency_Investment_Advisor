@@ -1,0 +1,127 @@
+:root {
+  --accent-col: #14203e;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  color: var(--accent-col);
+  font-family: "IBM Plex Sans";
+}
+
+body {
+  background: beige;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  height: 99px;
+}
+
+.navbar ul {
+  list-style-type: none;
+}
+
+.navbar li {
+  float: left;
+  padding-right: 56px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.title {
+  font-size: 66px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 130px;
+  padding-bottom: 30px;
+}
+
+.description {
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+}
+
+.start-trial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--accent-col);
+  border-radius: 10px;
+  width: 192px;
+  height: 73px;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 130px;
+}
+
+.divider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  padding-top: 15px;
+}
+
+.articles {
+  background-color: white;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.page-divider {
+  width: 200px;
+  height: 1px;
+  background: rgba(20, 32, 62, 0.2);
+}
+
+.our-thoughts {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.listed-features {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.article-desc {
+  font-size: 22px;
+  font-weight: 700;
+  padding-top: 20px;
+}
+
+.date {
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 15px;
+}
+
+.article img:hover,
+.article-desc:hover,
+.navbar li:hover {
+  cursor: pointer;
+}
+
+.start-trial:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}

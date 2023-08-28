@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My Webpage</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/test.css') }}">
+  <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+<body>
+  <table class="table">
+    <tr>
+      <td style="width: 20%; position: fixed;">
+        <div class="left-column">
+          <!-- Drop-down filter parameters -->
+          <h2>Filter Parameters</h3>
+          <h4>Crypto Pair</h6>
+          <select id="filter1" title="Cryptocurrencies" onchange="getChart(), getOverview(), getFeeds()"></select>
+          <br><br>
+          <h4>Timeframe</h6>
+          <select id="filter2" title="Time Frames" onchange="getChart()"></select>
+        </div>
+      </td>
+      <td style="width: 75%">
+        <div>
+          <!--Navigation Tab links -->
+          <div class="tab">
+            <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'chart')">Charts</button>
+            <button class="tablinks" onclick="openTab(event, 'overview')">Overview</button>
+            <button class="tablinks" onclick="openTab(event, 'feeds')">Feeds</button>
+            <button class="tablinks" onclick="openTab(event, 'predict')">Predict</button>
+          </div>
+              
+          <!-- Tab content -->
+          <div id="chart" class="tab-content">
+            <p id="chartbox">Please wait. Page is loading.</p>
+          </div>
+      
+          <div id="overview" class="tab-content">
+            <div id="coinOverview"></div>
+          </div>
+          
+          <div id="feeds" class="tab-content">
+            <div class="gcse-searchresults"></div>
+            <div class="gcse-search"></div>
+            <ul id="content"></ul>
+          </div>
+      
+          <div id="predict" class="tab-content">
+           
+            <head>
+              <title>Cryptocurrency Price Prediction</title>
+          </head>
+          <body>
+              <header>
+                  <h1>Cryptocurrency Price Prediction</h1>
+              </header>
+              <main>
+                  <section class="prediction-form">
+                      <h2>Predict Cryptocurrency Price</h2>
+                      <form id="price-prediction-form">
+                          <h2>Select Traded Coins:</h2>
+                          <form id="coinForm">
+                              <button type="button" id="select-all">Select All</button>
+                              <div id="coinList"></div>
+                          </form>
+
+                          <br>
+          
+                          <label for="desired-price">Desired Profit ($):</label>
+                          <input type="number" id="desired-price" name="desired-price" step="0.01" required>
+          
+                          <label for="desired-date">Desired Date:</label>
+                          <input type="date" id="desired-date" name="desired-date" required>
+          
+                          <button type="submit" id="predict-button">Predict</button>
+                      </form>
+                  </section>
+                  
+              </main>
+              <section class="prediction-result">
+                <h2>Prediction Result</h2>
+                <p id="prediction-output">Enter your prediction details and click 'Predict'.</p>
+            </section>
+              <footer>
+                  <p>&copy; 2023 Cryptocurrency Predictions</p>
+              </footer>
+
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <script async src="https://cse.google.com/cse.js?cx=157101ab2c5134d76"></script>
+  <script src="{{ url_for('static', filename='js/test.js') }}"></script>
+</body>
+</html>
