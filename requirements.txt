@@ -2,7 +2,6 @@ numpy
 flask
 flask_cors
 GoogleNews
-pandas
 pytz
 flask_caching
 bs4
@@ -10,6 +9,5 @@ requests
 json
 csv
 datetime
-time
 GoogleNews
 pytz

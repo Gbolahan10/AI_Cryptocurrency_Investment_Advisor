@@ -1,9 +1,8 @@
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import requests, json, csv
-import datetime, time
+import datetime
 from GoogleNews import GoogleNews
-import pandas as pd
 from datetime import datetime, timedelta
 from pytz import timezone
 
