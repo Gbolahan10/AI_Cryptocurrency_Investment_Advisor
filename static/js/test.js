@@ -151,7 +151,7 @@ async function getOverview() {
     "symbol": coinName 
   }
 
-  const url = 'http://127.0.0.1:5000/overview'
+  const url = '/overview'
   
   try {
       const response = await fetch(url, {
@@ -194,7 +194,7 @@ async function getChart() {
     "interval": interval
   }
 
-  const url = 'http://127.0.0.1:5000/history'
+  const url = '/history'
   
   try {
       const response = await fetch(url, {
@@ -275,7 +275,7 @@ async function getChart() {
 
 
 async function make_predictions(pred_data) {
-  const url = 'http://127.0.0.1:5000/predict'
+  const url = '/predict' 
   
   try {
       const response = await fetch(url, {
