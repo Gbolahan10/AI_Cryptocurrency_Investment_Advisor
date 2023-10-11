@@ -5,9 +5,5 @@ GoogleNews
 pytz
 flask_caching
 bs4
-requests
-json
-csv
-datetime
 GoogleNews
 pytz
