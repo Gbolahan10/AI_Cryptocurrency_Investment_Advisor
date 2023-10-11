@@ -139,8 +139,9 @@ def history():
     symbol = request_data['symbol']
     interval = request_data['interval']
     limit = 2000
-
+    print("got to history")
     candlesticks = requests.get(f"https://api.binance.com/api/v3/klines?symbol={symbol}&interval={interval}&limit={limit}")
+    print("got the history")
     new_candles = json.loads(candlesticks.text)
     processed_candlesticks = []
 
@@ -155,6 +156,7 @@ def history():
 
         processed_candlesticks.append(candlestick)
     
+    print("sent the history")
     return jsonify(processed_candlesticks)
 
 if __name__ == '__main__':
