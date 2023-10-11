@@ -6,3 +6,10 @@ pandas
 pytz
 flask_caching
 bs4
+requests
+json
+csv
+datetime
+time
+GoogleNews
+pytz
