@@ -147,7 +147,7 @@ def history():
 
     for data in new_candles:
         candlestick = { 
-            "time": data[0] / 1000, 
+            "time": int(data[0]) / 1000, 
             "open": data[1],
             "high": data[2], 
             "low": data[3], 
